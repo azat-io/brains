@@ -1,0 +1,44 @@
+@import-normalize;
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: rgba(0, 0, 0, 0.99);
+  color: #fff;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Droid Sans;
+  background: #f7f7f7;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.97);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.97);
+  }
+}
+
+.brain-text {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 72px;
+}
+
+.brain-image {
+  display: block;
+  height: 360px;
+  margin: 48px auto;
+  transform: scale(1);
+  animation: pulse 2s infinite;
+}

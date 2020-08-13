@@ -1,0 +1,44 @@
+{
+  "name": "brains",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Azat S. <to@azat.io>",
+  "license": "MIT",
+  "scripts": {
+    "start": "gulp",
+    "lint": "concurrently \"yarn:lint:*\"",
+    "lint:js": "eslint . --ignore-path .gitignore",
+    "lint:css": "stylelint \"./src/styles/**/*.css\""
+  },
+  "devDependencies": {
+    "@babel/core": "7.11.1",
+    "@babel/preset-env": "7.11.0",
+    "@babel/register": "7.10.5",
+    "babel-loader": "8.1.0",
+    "browser-sync": "2.26.12",
+    "concurrently": "5.3.0",
+    "eslint": "7.6.0",
+    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-plugin-fp": "2.3.0",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-ramda": "2.5.1",
+    "gulp": "4.0.2",
+    "gulp-htmlmin": "5.0.1",
+    "gulp-imagemin": "7.1.0",
+    "gulp-postcss": "8.0.0",
+    "husky": "4.2.5",
+    "postcss-csso": "4.0.0",
+    "postcss-normalize": "9.0.0",
+    "postcss-preset-env": "6.7.0",
+    "ramda": "0.27.1",
+    "stylelint": "13.6.1",
+    "stylelint-config-standard": "20.0.0",
+    "webpack": "4.44.1",
+    "webpack-stream": "5.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
+  }
+}
